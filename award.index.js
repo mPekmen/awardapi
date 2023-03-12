@@ -22,7 +22,7 @@ const _Invite = new Collection(); // İnvite
 
 const updateActions = async ({ channel = false, title, color, guild = [] }) => {
   client.user.setStatus("IDLE");
-  client.user.setActivity("/help | awardbot.me | " + client.guilds.cache.size.toLocaleString() + " guilds", { type: "WATCHING" });
+  client.user.setActivity("/help | awardbot.net | " + client.guilds.cache.size.toLocaleString() + " guilds", { type: "WATCHING" });
 
   if (channel) {
     try {
@@ -310,7 +310,7 @@ client.on("interaction", async interaction => {
 
     const _profile = await users.findOne({ user: interaction.user.id });
     if (!_profile) return await interaction.reply({ embeds: [$login], ephemeral: true });
-    const _request = await axios.post("https://api.awardbot.me/v1/giveaway/" + interaction.customId.replace("join-", "") + "/join?_token=" + _profile.token).catch(() => { });
+    const _request = await axios.post("https://api.awardbot.net/v1/giveaway/" + interaction.customId.replace("join-", "") + "/join?_token=" + _profile.token).catch(() => { });
     if (!_request || !_request.data) return await interaction.reply({ embeds: [$error], ephemeral: true });
 
     if (_request.data.success == true) {

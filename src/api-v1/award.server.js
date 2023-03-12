@@ -342,8 +342,8 @@ module.exports = client => {
     });
 
     app.get("/v1/invite/bot", (req, res) => {
-        if (!req.query["__w"]) return res.redirect(config.auth.discord.botInvite + (req.query["__beta"] === "true" ? ("&redirect_uri=http://3.120.245.111:3000/dashboard/added") : "&redirect_uri=https://awardbot.me/dashboard/added") + (req.query["disable_select"] ? ("&disable_guild_select=true") : "") + (req.query["id"] ? ("&guild_id=" + req.query["id"]) : ""));
-        res.redirect(config.auth.discord.botInvite + (req.query["__beta"] === "true" ? "&redirect_uri=https://api.awardbot.me/v1/invite/_callback" : "&redirect_uri=https://api.awardbot.me/v1/invite/callback") + (req.query["disable_select"] ? ("&disable_guild_select=true") : "") + (req.query["id"] ? ("&guild_id=" + req.query["id"]) : ""));
+        if (!req.query["__w"]) return res.redirect(config.auth.discord.botInvite + (req.query["__beta"] === "true" ? ("&redirect_uri=http://3.120.245.111:3000/dashboard/added") : "&redirect_uri=https://awardbot.net/dashboard/added") + (req.query["disable_select"] ? ("&disable_guild_select=true") : "") + (req.query["id"] ? ("&guild_id=" + req.query["id"]) : ""));
+        res.redirect(config.auth.discord.botInvite + (req.query["__beta"] === "true" ? "&redirect_uri=https://api.awardbot.net/v1/invite/_callback" : "&redirect_uri=https://api.awardbot.net/v1/invite/callback") + (req.query["disable_select"] ? ("&disable_guild_select=true") : "") + (req.query["id"] ? ("&guild_id=" + req.query["id"]) : ""));
     });
 
     app.get("/v1/invite/discord", (req, res) => {
@@ -519,10 +519,10 @@ module.exports = client => {
     // </404> //
 
     // <LISTEN SERVER> //
-    server.listen(process.env.PORT || 80, () => {
+    server.listen(process.env.PORT || 5000, () => {
         require("./award.boost.js")(client);
         require("./award.interval.js")(client, wsSend);
-        console.log("(!) Server listening at ::" + (process.env.PORT || 80) + " port!");
+        console.log("(!) Server listening at ::" + (process.env.PORT || 5000) + " port!");
     });
     // </LISTEN SERVER> //
 

@@ -2,7 +2,7 @@ module.exports = {
   bot: {
     help: {
       text: "Yardım",
-      description: "Botun bir komutu yok. Çekiliş oluşturmak veya yönetmek için web sitemizi ziyaret etmeli ve kontrol paneline giriş yapmalısınız. \n\n Kontrol Paneli: https://awardbot.me/dashboard",
+      description: "Botun bir komutu yok. Çekiliş oluşturmak veya yönetmek için web sitemizi ziyaret etmeli ve kontrol paneline giriş yapmalısınız. \n\n Kontrol Paneli: https://awardbot.net/dashboard",
     },
     invite: {
       invitations: "Davetleri",

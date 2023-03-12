@@ -68,7 +68,7 @@ module.exports = (client, wsSend) => {
                                     const finishedEmbed = new Discord.MessageEmbed()
                                         .setColor('#ea822d').setTitle(giveaway.title+' - Reroll').setDescription(giveaway.description)
                                         .addField('__Prize__', giveaway.prize)
-                                        .setURL('https://awardbot.me/g/'+giveaway.id)
+                                        .setURL('https://awardbot.net/g/'+giveaway.id)
                                         .setFooter('award - Create advanced giveaways!')
                                         .addField('__New Winners__', winners.map(_w => "<@" + _w.id + ">").join("`,` "));
                                     try {

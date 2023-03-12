@@ -2,7 +2,7 @@ module.exports = {
   bot: {
     help: {
       text: "Help",
-      description: "The bot does not have a command. To create or manage giveaways, you must visit our website and log in to the control panel. \n\n Control Panel: https://awardbot.me/dashboard",
+      description: "The bot does not have a command. To create or manage giveaways, you must visit our website and log in to the control panel. \n\n Control Panel: https://awardbot.net/dashboard",
     },
     invite: {
       invitations: "Invitations",

@@ -21,7 +21,7 @@ module.exports = app => {
 
         try {
             const _url = new URL(
-                "wss://api.awardbot.me" + 
+                "wss://api.awardbot.net" + 
                 req.url
             );
 

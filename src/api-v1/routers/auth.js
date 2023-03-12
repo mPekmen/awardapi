@@ -99,7 +99,7 @@ module.exports = settings => {
       new TelegramStrategy({
         clientID: "5212483120",
         clientSecret: "AAGg1wTqykQf4uI9XS8WziPtbs0rA-9Tlg8",
-        callbackURL: 'https://api.awardbot.me/v1/connections/telegram/callback'
+        callbackURL: 'https://api.awardbot.net/v1/connections/telegram/callback'
       },
       function(accessToken, refreshToken, profile, done) {
             process.nextTick(() => done(null, Object.assign(profile, {
